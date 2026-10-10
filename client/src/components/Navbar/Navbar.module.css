@@ -1,0 +1,132 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color, #111827);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color, #374151);
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--accent-color, #2563eb);
+}
+
+/* react-router-dom automatically applies this class to the active link */
+.link:global(.active) {
+  color: var(--accent-color, #2563eb);
+  border-bottom-color: var(--accent-color, #2563eb);
+}
+
+.externalLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.iconLink {
+  text-decoration: none;
+  color: var(--text-color, #374151);
+  font-weight: 500;
+}
+
+.resumeBtn {
+  background-color: var(--button-bg, #2563eb);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.resumeBtn:hover {
+  opacity: 0.9;
+}
+
+/* Hamburger button - hidden on desktop by default */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color, #111827);
+}
+
+/* ===== Mobile styles ===== */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--bg-color, #ffffff);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+
+    /* Hidden by default on mobile until toggled open */
+    display: none;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .externalLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

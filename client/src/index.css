@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: var(--text-color, #111827);
+  background-color: var(--bg-color, #ffffff);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+a {
+  color: inherit;
+}
+/* Light theme (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --text-muted: #6b7280;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #2563eb; /* used for links and text highlights */
+  --button-bg: #2563eb; /* used for buttons that have white text */
+  --placeholder-bg: #eff6ff;
+  --success-color: #15803d;
+  --error-color: #b91c1c;
+  color-scheme: light; /* makes scrollbars and form controls match */
+}
+
+/* Dark theme: same names, different values */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --text-muted: #94a3b8;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --accent-color: #60a5fa;
+  --button-bg: #2563eb;
+  --placeholder-bg: #1e3a5f;
+  --success-color: #4ade80;
+  --error-color: #f87171;
+  color-scheme: dark;
+}
+
+/* Skip link: hidden off-screen until a keyboard user tabs to it */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  color: #ffffff;
+  background-color: var(--button-bg, #2563eb);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Respect users who ask their computer to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

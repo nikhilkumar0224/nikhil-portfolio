@@ -1,0 +1,20 @@
+.item {
+  padding: 0 0 1.75rem 1.25rem;
+  margin-bottom: 1.75rem;
+  border-left: 3px solid var(--accent-color, #2563eb);
+}
+
+.title {
+  font-size: 1.15rem;
+}
+
+.meta {
+  color: var(--text-muted, #6b7280);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.points {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}

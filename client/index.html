@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nikhil Kumar | Junior Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Nikhil Kumar, a Junior Full Stack Developer based in Auckland, New Zealand."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph: controls how your link looks when shared on LinkedIn, Slack, etc. -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Nikhil Kumar | Junior Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Nikhil Kumar, a Junior Full Stack Developer based in Auckland, New Zealand."
+    />
+    <!-- TODO: replace with your real Netlify URL once deployed (Stage 11) -->
+    <meta property="og:url" content="https://YOUR-SITE.netlify.app" />
+    <!-- TODO: add a 1200x630 image at client/public/og-image.png, then use its full URL -->
+    <meta
+      property="og:image"
+      content="https://YOUR-SITE.netlify.app/og-image.png"
+    />
+    <script>
+      // Runs immediately, before React, so the correct theme is set from the first paint
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme =
+            saved === "light" || saved === "dark"
+              ? saved
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

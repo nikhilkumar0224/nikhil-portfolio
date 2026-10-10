@@ -1,0 +1,15 @@
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blocks h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.blocks p {
+  line-height: 1.7;
+  color: var(--text-muted, #4b5563);
+}
