@@ -11,19 +11,11 @@ export async function getProjectById(id) {
   return res.json();
 }
 
-// export async function sendContactMessage(formData) {
-//   const res = await fetch(`${API_URL}/api/contact`, {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(formData),
-//   });
-//   if (!res.ok) throw new Error("Failed to send message");
-//   return res.json();
-// }
 export function getImageUrl(imagePath) {
   if (!imagePath) return null;
   if (imagePath.startsWith("http")) return imagePath;
-  return `${API_URL}${imagePath}`;
+  if (imagePath.startsWith("/uploads/")) return `${API_URL}${imagePath}`;
+  return imagePath;
 }
 export async function sendContactMessage(formData) {
   const res = await fetch(`${API_URL}/api/contact`, {

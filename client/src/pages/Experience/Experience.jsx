@@ -22,10 +22,20 @@ export default function Experience() {
       />
 
       <TimelineItem
-        title="[Role or project title]"
-        place="[Organisation]"
-        period="[Start – End]"
-        points={["[What you did]"]}
+        title="JavaScript Portfolio"
+        place="Full-stack training"
+        period="[2026]"
+        points={[
+          "Built with vanilla HTML, CSS, and JavaScript to practice core web fundamentals.",
+        ]}
+      />
+      <TimelineItem
+        title="Responsive Web Project"
+        place="Full-stack training"
+        period="[2026]"
+        points={[
+          "A responsive layout project focused on mastering CSS Flexbox, Grid, and media queries.",
+        ]}
       />
 
       <p>

@@ -8,7 +8,7 @@ import {
   uploadProjectImage,
 } from "../controllers/projectsController.js";
 import { uploadImage } from "../middleware/upload.js";
-import { requireAdmin } from "../middleware/requireAdmin.js"; // NEW
+import { requireAdmin } from "../middleware/requireAdmin.js";
 
 const router = express.Router();
 
@@ -16,9 +16,6 @@ const router = express.Router();
 router.get("/", getAllProjects);
 router.get("/:id", getProjectById);
 
-// Admin only: requireAdmin runs FIRST.
-// On the upload route it sits before Multer, so an unauthorised request
-// is rejected before any file is written to your disk.
 router.post(
   "/upload",
   requireAdmin,

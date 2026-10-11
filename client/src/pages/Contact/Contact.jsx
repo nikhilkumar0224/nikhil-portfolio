@@ -18,7 +18,7 @@ export default function Contact() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // stops the browser from reloading the page
+    event.preventDefault();
     setStatus("sending");
     setFeedback("");
 

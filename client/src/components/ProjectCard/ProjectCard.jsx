@@ -14,7 +14,6 @@ export default function ProjectCard({ project }) {
           className={styles.image}
         />
       ) : (
-        // Placeholder shown until you upload a real screenshot
         <div className={styles.placeholder} aria-hidden="true">
           {project.title.charAt(0)}
         </div>

@@ -3,8 +3,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  // index.html already set data-theme before React started (see File 5),
-  // so we just read it. "light" is only a safety fallback.
   const [theme, setTheme] = useState(
     () => document.documentElement.dataset.theme || "light",
   );

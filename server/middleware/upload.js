@@ -3,15 +3,11 @@ import path from "path";
 import crypto from "crypto";
 import { fileURLToPath } from "url";
 
-// ES Modules have no __dirname, so we rebuild it (same trick as server.js)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Always points to server/uploads, no matter where you start the server from
 const uploadDir = path.join(__dirname, "..", "uploads");
 
-// The ONLY file types we accept, mapped to the extension we save them with.
-// image/jpeg covers both .jpg and .jpeg files.
 const allowedTypes = {
   "image/jpeg": ".jpg",
   "image/png": ".png",

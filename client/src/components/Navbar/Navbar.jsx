@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { profile } from "../../data/profile";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export default function Navbar() {
@@ -85,7 +86,7 @@ export default function Navbar() {
               LinkedIn
             </a>
             <a
-              href="/resume.pdf" // TODO: replace with your real resume file in client/public/
+              href={profile.resume}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.resumeBtn}
